@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    username: clientes
+    url: jdbc:postgresql://localhost:5432/clientes_db?useTimezone=true&serverTimezone=UTC&createDatabaseIfNotExist=true
+    password: vlc123
+
+  jpa:
+    hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate.ddl-auto: update
+    hibernate:
+      jdbc: time_zone = TimeZone
+    show-sql: 'true'
+
+  jackson:
+    default-property-inclusion: non_null
+
+

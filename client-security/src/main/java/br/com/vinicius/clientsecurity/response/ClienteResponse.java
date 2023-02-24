@@ -17,7 +17,7 @@ public class ClienteResponse {
     private String nome;
     private String foneMovel;
     private String foneFixo;
-    private String errror;
+    private String error;
     private String email;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private LocalDate dataNascimento;

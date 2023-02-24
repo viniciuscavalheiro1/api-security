@@ -11,8 +11,11 @@ import java.util.UUID;
 
 @Service
 public class ClientService {
-    @Autowired
-    private ClienteRepository clienteRepository;
+    private final ClienteRepository clienteRepository;
+
+    public ClientService(ClienteRepository clienteRepository) {
+        this.clienteRepository = clienteRepository;
+    }
 
     public Cliente save(Cliente cliente) {
         return clienteRepository.save(cliente);

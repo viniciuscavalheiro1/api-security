@@ -58,7 +58,7 @@ public class ClienteResource {
 
             return ResponseEntity.ok().body(clienteResponse);
         } catch (Exception e) {
-            return ResponseEntity.badRequest().body(ClienteResponse.builder().errror(e.getMessage()).build());
+            return ResponseEntity.badRequest().body(ClienteResponse.builder().error(e.getMessage()).build());
         }
     }
 
@@ -72,7 +72,7 @@ public class ClienteResource {
 
             return ResponseEntity.ok().body(clienteResponse);
         } catch (Exception e) {
-            return ResponseEntity.badRequest().body(ClienteResponse.builder().errror(e.getMessage()).build());
+            return ResponseEntity.badRequest().body(ClienteResponse.builder().error(e.getMessage()).build());
         }
     }
 
@@ -92,7 +92,7 @@ public class ClienteResource {
 
             return ResponseEntity.status(HttpStatus.OK).body(clienteResponse);
         } catch (Exception e) {
-            return ResponseEntity.badRequest().body(ClienteResponse.builder().errror(e.getMessage()).build());
+            return ResponseEntity.badRequest().body(ClienteResponse.builder().error(e.getMessage()).build());
         }
     }
 
@@ -103,7 +103,7 @@ public class ClienteResource {
             return ResponseEntity.noContent().build();
         } catch (Exception e) {
             log.error(e.getMessage());
-            return ResponseEntity.badRequest().body(ClienteResponse.builder().errror("Cliente não existe ou invalido: " + id).build());
+            return ResponseEntity.badRequest().body(ClienteResponse.builder().error("Cliente não existe ou invalido: " + id).build());
         }
     }
 
